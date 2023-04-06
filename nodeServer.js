@@ -3,7 +3,8 @@
 
 const http = require("http");
 //  récupération module http
-
+const fs = require('fs');
+// Récupération module fs
 // const server = http.createServer((Request, Response)=>
 // {
 //     console.log("Server create succesfully.")
@@ -49,33 +50,54 @@ const http = require("http");
 
 
 const server = http.createServer((Request, Response)=>{
+    let fichier = "";
+    // création dossier HTML,puis var dans function callback
     Response.setHeader('content-type', 'text/html; charset=utf-8');
     // html pour balises
     console.log("Server create succesfully.");
     if ((Request.url === "/" || Request.url === "/home") && (Request.method === "GET")) {
         // console.log("Vous êtes sur la Homepage");
-        Response.write('<p>Vous êtes sur la Homepage</p>');
+        // Response.write('<p>Vous êtes sur la Homepage</p>');
+        fichier = "./HTML/index.html";
     }
     else if ((Request.url === "/profil") && (Request.method === "GET")){
         // console.log("Vous êtes sur la page profil");
-        Response.write("<p>Vous êtes sur la page profil</p>");
+        // Response.write("<p>Vous êtes sur la page profil</p>");
+        fichier = "./HTML/profil.html";
     }
     else if((Request.url === "/contact") && (Request.method === "GET")){
         // console.log("Vous êtes sur la page contact");
-        Response.write("<p>Vous êtes sur la page contact</p>");
+        // Response.write("<p>Vous êtes sur la page contact</p>");
+        fichier = "./HTML/contact.html";
+    }
+    else if((Request.url === "/product") && (Request.method === "GET")){
+        // console.log("Vous êtes sur la page contact");
+        // Response.write("<p>Vous êtes sur la page contact</p>");
+        fichier = "./HTML/product.html";
     }
     else{
         // console.log("Vous êtes sur une page qui n' existe pas!");
-        Response.write("Vous êtes sur une page qui n'existe pas 🍔");
+        // Response.write("Vous êtes sur une page qui n'existe pas 🍔");
+        fichier = "./HTML/404.html";
+
     }
-    Response.end();
+    fs.readFile(fichier, (Error, Data) => 
+    {
+        if (Error){
+            console.error(Error);
+            Response.end();
+        }
+        else{
+            // console.log(Data);
+            Response.write(Data);
+            Response.end();
+        }
 });
-
-
-// voir réponse dans réseau tout
-
+});
 
 server.listen(8080, "localhost", ()=>{
     console.log("Server listening on port 8080");
 });
+
+
 
