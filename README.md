@@ -73,7 +73,7 @@ principe du middleware use, si au début ne va pas chercher ailleurs, boucle inf
 pour dire par défaut tu fais ça mais continue:
 il faut ajouter next
 
-ajouit img index erreur404 
+ajout img index erreur404 
 https://www.donskytech.com/how-to-serve-static-files-in-node-js-and-express-server/
 
 creer dossier public
