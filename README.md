@@ -1,37 +1,30 @@
 # Serveur node
 
 
-watcher pour automatiser
-surveille changeùent et evite relancer serveur
+Watcher pour automatiser
+->surveille changement et évite relancer serveur
 
-outil: nodemon
+Outil: **nodemon**
 npm init
 repondre entrée
 ou
 npm init -y
 package json
-
 chosisir page principale dans package main
-
 author anneso
 licence logiciel propriétaire
-
-tts dépendances ou package que je vais utiliseer ex nodemon
-
-google nodemon
+(toutesles dépendances ou package que je vais utiliser,exemple: nodemon)
 npm i nodemon
-ajoit package-lock et node module, et dans json appa liste des dépendances
-gitignore
+ajout package-lock et node module, et dans json apparaît liste des dépendances
+Attention clone git -> retirer node modules:
+**gitignore**
 .gitignore /node_modules pr push
 
 lancement terminal nodemon nodeServer
-
-attention clone git : retire node modules
-terminal -< npm i
+terminal -> npm i
 puis npm start
 
-dependences fontawesome
-npm i 
+(Il y a aussi des dépendances fontawesome par exemple)
 
 {
   "name": "serveur_node",
@@ -50,36 +43,30 @@ npm i
   }
 }
 
-autre package:
-express
+Autre package:
 
-fournir des outils robustes pour serveur http
+**express**:
+il permet de fournir des outils robustes pour serveur http
 solution pour les appli à page unique,hybrides, ...
 
-ici créa single page application spa
-avec rendu différents, un seul script
-la valeur de la var change seulement
-
-install express dans app:
-npm install express
-app dans package json
-middleware
-----------
+Ici, création **single page application** (SPA)
+avec rendu différents, un seul script, il n' y a que la valeur de la var change seulement.
 
 faire get pour que si on est sur l'url comme ressource/ redirige vers /home
 
-middleware:
-principe du middleware use, si au début ne va pas chercher ailleurs, boucle infinie. des qu'il éxécute ne va pas à la suivante
-pour dire par défaut tu fais ça mais continue:
-il faut ajouter next
+**middleware**:
+principe du middleware use: si au début ne va pas chercher ailleurs, boucle infinie. Dès qu'il éxécute ne va pas à la suivante,pour dire par défaut tu fais ça mais continue:
+il faut ajouter **next**.
 
-ajout img index erreur404 
+
+Ajout img index erreur404:
 https://www.donskytech.com/how-to-serve-static-files-in-node-js-and-express-server/
 
-creer dossier public
-ressources distantes
+Il faut donc créer un dossier public pour les ressources distantes.
 
-midleware tiers:
-npm i morgan
+Autre midleware tiers:
+npm i **morgan**.
 
-faire nav qui permet de na entre tts les pages
+
+
+Voir nav pour naviguer entre toutes les pages.
