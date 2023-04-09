@@ -55,7 +55,9 @@ avec rendu différents, un seul script, il n' y a que la valeur de la var change
 faire get pour que si on est sur l'url comme ressource/ redirige vers /home
 
 **middleware**:
-principe du middleware use: si au début ne va pas chercher ailleurs, boucle infinie. Dès qu'il éxécute ne va pas à la suivante,pour dire par défaut tu fais ça mais continue:
+
+![Middleware](img/middleware.png)
+Principe du middleware use: si au début ne va pas chercher ailleurs, boucle infinie. Dès qu'il éxécute ne va pas à la suivante,pour dire par défaut tu fais ça mais continue:
 il faut ajouter **next**.
 
 
