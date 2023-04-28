@@ -7,7 +7,7 @@ vu précédemment (node.js), pour importer un module de node il faut utiliser le
 Commençons par créer un fichier que nous allons nommé “nodeServer.js” puis importons le module ‘http’ que nous stockerons dans une constante du même nom :
 
   const http = require("http");
-Cette constante nous donne accès à la méthode **createServer** de **l' obejt http**. Cette méthode,
+Cette constante nous donne accès à la méthode **createServer** de **l' objet http**. Cette méthode,
 comme son nom l'indique, nous permet de créer notre serveur. Elle prend en paramètre une fonction callback, ce sera une fonction fléchée. 
 Pour l’instant nous demanderons à ce callback de juste
 afficher un message de succès dans la console :
@@ -39,7 +39,7 @@ Nous pouvons aussi récupèrer l' URL courante grâce à **Request.url**, l'argu
 Exemple:
 Si nous nous situons sur l'index, la console affiche /, donc si nous rajoutons dans l' url home, la console affichera:
 /home.
-Cela est important cae elles vont nous permettre de dire au serveur quelle réponse envoyer au client selon l' url ou selon la reuête HTTP, voire même les deux.
+Cela est important car elles vont nous permettre de dire au serveur quelle réponse envoyer au client selon l' url ou selon la reuête HTTP, voire même les deux.
 
 Exemple:
 
